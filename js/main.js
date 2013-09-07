@@ -77,7 +77,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 			'max-height':'60%'
 		})
 		$.each('img',function(){
-			alert($(this).width())
+			alert($(this).width)
 		})
 	},1000)
 
