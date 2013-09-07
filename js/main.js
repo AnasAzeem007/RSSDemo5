@@ -77,7 +77,14 @@ $("#contentPage").live("pageshow", function(prepage) {
 			'max-height':'60%'
 		})*/
 		$.each('img',function(){
-			$(this).resizable({ aspectRatio:true, maxHeight:300 });
+			if($(this).width() > $(this).height()) { 
+				 $(this).css('width',MaxPreviewDimension+'px');
+				 $(this).css('height','auto');
+				} else {
+				 $(this).css('height',MaxPreviewDimension+'px');
+				 $(this).css('width','auto');
+				}
+			//$(this).resizable({ aspectRatio:true, maxHeight:300 });
 			/*$(this).load(function(){
 				alert('anas');	*/
 				
