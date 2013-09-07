@@ -83,7 +83,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 				
 				//alert($(this).size() +' : '+ $(this).height()+'x'+$(this).width());
 				
-			})
+			//})
 			//alert($(this).width)
 		})
 	},10)
