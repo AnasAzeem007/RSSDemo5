@@ -25,7 +25,7 @@ function renderEntries(entries) {
 function initialize() {
 	console.log('ready to use google');
 	var feed = new google.feeds.Feed(RSS);
-	feed.setNumEntries(10);
+	feed.setNumEntries(1);
 	$.mobile.showPageLoadingMsg();
 	feed.load(function(result) {
 		$.mobile.hidePageLoadingMsg();
@@ -80,6 +80,11 @@ $("#contentPage").live("pageshow", function(prepage) {
 	},1)
 
 });
+
+$(".more").live('click', function() {
+    _viewCount = 20;
+    google.load("feeds", "1", {callback: initialize});
+})
 	
 $(window).on("touchstart", ".fullLink", function(e) {
 	e.preventDefault();
