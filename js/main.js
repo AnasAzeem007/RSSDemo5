@@ -77,13 +77,13 @@ $("#contentPage").live("pageshow", function(prepage) {
 			'max-height':'60%'
 		})
 		$.each('img',function(){
-			$('img').resizable({ aspectRatio:true, maxHeight:300 });
-			alert('anas');	
-			/*$('img').load(function(){
+			$(this).resizable({ aspectRatio:true, maxHeight:300 });
+			$(this).load(function(){
+				alert('anas');	
 				
-				alert($(this).size() +' : '+ $(this).height()+'x'+$(this).width());
+				//alert($(this).size() +' : '+ $(this).height()+'x'+$(this).width());
 				
-			})*/
+			})
 			//alert($(this).width)
 		})
 	},1000)
