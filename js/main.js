@@ -73,9 +73,10 @@ $("#contentPage").live("pageshow", function(prepage) {
 	setTimeout(function(){
 		$('img').removeAttr('width')
 		$('img').css({
-			'max-width':'90%'
+			'max-width':'90%',
+			'max-height':'60%'
 		})
-	},5000)
+	},1000)
 
 });
 	
