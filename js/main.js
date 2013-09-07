@@ -78,7 +78,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 		})
 		$.each('img',function(){
 			$('img').load(function(){
-				alert($(this).height()+'x'+$(this).width());
+				alert($(this).title()+' : '+$(this).height()+'x'+$(this).width());
 				
 			})
 			//alert($(this).width)
