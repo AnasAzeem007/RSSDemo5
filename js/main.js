@@ -74,7 +74,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 		//$('img').removeAttr('width')
 		$('img').css({
 			'height':'auto',
-			'width':'auto'
+			'width':'50%'
 			/*'min-height':'50%',
 			'max-width':'100%',
 			'max-height':'100%'*/
