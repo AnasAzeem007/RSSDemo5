@@ -74,10 +74,10 @@ $("#contentPage").live("pageshow", function(prepage) {
 		//$('img').removeAttr('width')
 		$('img').css({
 			'height':'auto',
-			'width':'50%'
-			/*'min-height':'50%',
+			//'width':'50%'
+			//'min-height':'50%',
 			'max-width':'100%',
-			'max-height':'100%'*/
+			//'max-height':'100%'
 		})
 		$.each('img',function(){
 			
