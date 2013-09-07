@@ -6,6 +6,7 @@ var RSS = "http://www.betaout.com/blog/feed/atom/";
 //Stores entries
 var entries = [];
 var selectedEntry = "";
+var _viewCount = 5;
 
 //listen for detail links
 $(".contentLink").live("click", function() {
@@ -25,7 +26,7 @@ function renderEntries(entries) {
 function initialize() {
 	console.log('ready to use google');
 	var feed = new google.feeds.Feed(RSS);
-	feed.setNumEntries(5);
+	feed.setNumEntries(_viewCount);
 	$.mobile.showPageLoadingMsg();
 	feed.load(function(result) {
 		$.mobile.hidePageLoadingMsg();
