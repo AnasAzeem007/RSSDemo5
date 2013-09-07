@@ -74,7 +74,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 		//$('img').removeAttr('width')
 		
 		$('img').css({
-			alert('max-width');
+			//alert('max-width');
 			'max-width':'90%',
 			'max-height':'60%'
 		})
