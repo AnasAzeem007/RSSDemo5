@@ -69,28 +69,15 @@ $("#contentPage").live("pageshow", function(prepage) {
 	contentHTML += entries[selectedEntry].content;
 	contentHTML += '<p/><a href="'+entries[selectedEntry].link + '" class="fullLink" data-role="button">Read Entry on Site</a>';
 	$("#entryText",this).html(contentHTML);
-	//$("#entryText .fullLink",this).button();
+	$("#entryText .fullLink",this).button();
 	setTimeout(function(){
-		//$('img').removeAttr('width')
 		$('img').css({
 			'height':'auto',
-			//'width':'50%'
-			//'min-height':'50%',
 			'max-width':'100%',
-			//'max-height':'100%'
 		})
 		$.each('img',function(){
-			
-			//$(this).resizable({ aspectRatio:true, maxHeight:300 });
-			/*$(this).load(function(){
-				alert('anas');	*/
-				
-				//alert($(this).size() +' : '+ $(this).height()+'x'+$(this).width());
-				
-			//})
-			//alert($(this).width)
 		})
-	},10)
+	},1)
 
 });
 	
@@ -99,7 +86,7 @@ $(window).on("touchstart", ".fullLink", function(e) {
 	window.inAppBrowser.showWebPage($(this).attr("href"));
 });
 
-function doOnOrientationChange()
+/*function doOnOrientationChange()
   {
     switch(window.orientation) 
     {  
@@ -116,4 +103,4 @@ function doOnOrientationChange()
   window.addEventListener('orientationchange', doOnOrientationChange);
 
   // Initial execution if needed
-  doOnOrientationChange();
+  doOnOrientationChange();*/
