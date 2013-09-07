@@ -73,8 +73,10 @@ $("#contentPage").live("pageshow", function(prepage) {
 	setTimeout(function(){
 		//$('img').removeAttr('width')
 		$('img').css({
-			'max-width':'90%',
-			'max-height':'60%'
+			'height':'100px',
+			'min-height':'50%',
+			'max-width':'100%',
+			'max-height':'100%'
 		})
 		$.each('img',function(){
 			
