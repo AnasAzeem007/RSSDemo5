@@ -2,7 +2,7 @@
 //Title of the blog
 var TITLE = "Betaout Blog";
 //RSS url
-var RSS = "http://www.betaout.com/blog/feed/";
+var RSS = "http://www.betaout.com/blog/feed/atom/";
 //Stores entries
 var entries = [];
 var selectedEntry = "";
