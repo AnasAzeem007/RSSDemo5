@@ -78,7 +78,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 		})
 		$.each('img',function(){
 			
-			$(this).resizable({ aspectRatio:true, maxHeight:300 });
+			//$(this).resizable({ aspectRatio:true, maxHeight:300 });
 			/*$(this).load(function(){
 				alert('anas');	*/
 				
