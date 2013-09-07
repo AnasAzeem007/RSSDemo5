@@ -83,7 +83,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 });
 
 $(".more").live('click', function() {
-    _viewCount = 10;
+    _viewCount = _viewCount+5;
     google.load("feeds", "1", {callback: initialize});
 })
 	
