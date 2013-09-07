@@ -1,4 +1,3 @@
-
 //EDIT THESE LINES
 //Title of the blog
 var TITLE = "Betaout Blog";
@@ -72,11 +71,11 @@ $("#contentPage").live("pageshow", function(prepage) {
 	$("#entryText",this).html(contentHTML);
 	//$("#entryText .fullLink",this).button();
 	setTimeout(function(){
+		$('img').removeAttr('width')
 		$('img').css({
-			'height':'50%',
-			'width':'50%'
+			'max-width':'90%'
 		})
-	},2000)
+	},5000)
 
 });
 	
