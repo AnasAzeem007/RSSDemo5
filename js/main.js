@@ -70,13 +70,13 @@ $("#contentPage").live("pageshow", function(prepage) {
 	contentHTML += '<p/><a href="'+entries[selectedEntry].link + '" class="fullLink" data-role="button">Read Entry on Site</a>';
 	$("#entryText",this).html(contentHTML);
 	//$("#entryText .fullLink",this).button();
-	setTimeout(function(){
+	/*setTimeout(function(){
 		/*$('img').removeAttr('width')*/
 		$('img').css({
 			'max-width':'90%',
 			'max-height':'60%'
 		})
-	},1000)
+	},1000)*/
 
 });
 	
