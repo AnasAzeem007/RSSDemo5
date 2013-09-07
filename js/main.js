@@ -77,6 +77,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 			'max-height':'60%'
 		})
 		$.each('img',function(){
+			alert('1.anas');
 			$(this).resizable({ aspectRatio:true, maxHeight:300 });
 			$(this).load(function(){
 				alert('anas');	
