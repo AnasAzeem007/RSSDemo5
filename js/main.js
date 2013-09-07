@@ -71,7 +71,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 	$("#entryText",this).html(contentHTML);
 	//$("#entryText .fullLink",this).button();
 	setTimeout(function(){
-		$('img').removeAttr('width')
+		/*$('img').removeAttr('width')*/
 		$('img').css({
 			'max-width':'90%',
 			'max-height':'60%'
