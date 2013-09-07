@@ -78,9 +78,11 @@ $("#contentPage").live("pageshow", function(prepage) {
 		})*/
 		$.each('img',function(){
 			if($(this).width() > $(this).height()) { 
-				 $(this).css('width',MaxPreviewDimension+'px');
-				 $(this).css('height','auto');
+				 /*$(this).css('width',MaxPreviewDimension+'px');
+				 $(this).css('height','auto');*/
+				 alert('width');
 				} else {
+					alert('Height');
 				 $(this).css('height',MaxPreviewDimension+'px');
 				 $(this).css('width','auto');
 				}
