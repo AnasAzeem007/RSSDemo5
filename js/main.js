@@ -77,10 +77,12 @@ $("#contentPage").live("pageshow", function(prepage) {
 			'max-height':'60%'
 		})
 		$.each('img',function(){
-			$('img').load(function(){
+			$('img').resizable({ aspectRatio:true, maxHeight:300 });
+			/*$('img').load(function(){
+				
 				alert($(this).size() +' : '+ $(this).height()+'x'+$(this).width());
 				
-			})
+			})*/
 			//alert($(this).width)
 		})
 	},1000)
