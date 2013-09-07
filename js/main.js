@@ -72,21 +72,13 @@ $("#contentPage").live("pageshow", function(prepage) {
 	//$("#entryText .fullLink",this).button();
 	setTimeout(function(){
 		//$('img').removeAttr('width')
-	/*	$('img').css({
+		$('img').css({
 			'max-width':'90%',
 			'max-height':'60%'
-		})*/
+		})
 		$.each('img',function(){
-			if($(this).width() > $(this).height()) { 
-				 /*$(this).css('width',MaxPreviewDimension+'px');
-				 $(this).css('height','auto');*/
-				 alert('width');
-				} else {
-					alert('Height');
-				 $(this).css('height',MaxPreviewDimension+'px');
-				 $(this).css('width','auto');
-				}
-			//$(this).resizable({ aspectRatio:true, maxHeight:300 });
+			
+			$(this).resizable({ aspectRatio:true, maxHeight:300 });
 			/*$(this).load(function(){
 				alert('anas');	*/
 				
