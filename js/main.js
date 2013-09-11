@@ -41,6 +41,7 @@ function initialize() {
 				$("#status").html("Using cached version...");
 				entries = JSON.parse(localStorage["entries"]);
 				renderEntries(entries);
+				alert(entries);
 			} else {
 				$("#status").html("Sorry, we are unable to get the RSS and there is no cache.");
 			}
