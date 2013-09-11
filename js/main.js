@@ -33,9 +33,12 @@ function initialize() {
 		$.mobile.hidePageLoadingMsg();
 		if(!result.error) {
 			entries = result.feed.entries;
+			if(entries.length > 0){
 			localStorage["entries"] = JSON.stringify(entries);
 			renderEntries(entries);
-			alert(entries.length);
+			}else{
+				alert("No More Entries");
+			}
 		} else {
 			console.log("Anas Error - "+result.error.message);
 			if(localStorage["entries"]) {
@@ -91,8 +94,8 @@ $(".next").live('click', function() {
     if(pageNo>1 && _viewCount%10==0){
     	RSS = "http://www.betaout.com/blog/feed/?paged="+pageNo;
     	alert(RSS);
-    }
     google.load("feeds", "1", {callback: initialize});
+    }
 })
 	
 $(window).on("touchstart", ".fullLink", function(e) {
