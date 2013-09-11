@@ -79,7 +79,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 			'max-width':'100%',
 		})
 		$('h1').css({
-			'font-size':'75%'
+			'font-size':'50%'
 		})
 	},1)
 
