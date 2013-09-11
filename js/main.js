@@ -83,7 +83,13 @@ $("#contentPage").live("pageshow", function(prepage) {
 });
 
 $(".more").live('click', function() {
+	var pageNo;
     _viewCount = _viewCount+5;
+    pageNo = _viewCount/10;
+    if(pageNo>0 && _viewCount%10==0){
+    	RSS = "http://www.betaout.com/blog/feed/?paged="+pageNo;
+    	alert(RSS);
+    }
     google.load("feeds", "1", {callback: initialize});
 })
 	
