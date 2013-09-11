@@ -7,6 +7,7 @@ var RSS = "http://www.betaout.com/blog/feed/atom/";
 var entries = [];
 var selectedEntry = "";
 var _viewCount = 10;
+var pageNo = 1;
 var DATADIR;
 
 //listen for detail links
@@ -88,7 +89,6 @@ $("#contentPage").live("pageshow", function(prepage) {
 });
 
 $(".next").live('click', function() {
-	var pageNo = 1;
 	_viewCount += 10;
     pageNo = _viewCount/10;
     if(pageNo>1 && _viewCount%10==0){
@@ -97,6 +97,18 @@ $(".next").live('click', function() {
     google.load("feeds", "1", {callback: initialize});
     }
 })
+
+$(".previous").live('click', function() {
+	_viewCount -= 10;
+    pageNo = _viewCount/10;
+    if(pageNo>1 && _viewCount%10==0){
+    	RSS = "http://www.betaout.com/blog/feed/?paged="+pageNo;
+    	alert(RSS);
+    google.load("feeds", "1", {callback: initialize});
+    }
+})
+
+
 	
 $(window).on("touchstart", ".fullLink", function(e) {
 	e.preventDefault();
