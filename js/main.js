@@ -78,8 +78,8 @@ $("#contentPage").live("pageshow", function(prepage) {
 			'height':'auto',
 			'max-width':'100%',
 		})
-		$.each('img',function(){
-		})
+		/*$.each('img',function(){
+		})*/
 	},1)
 
 });
@@ -95,28 +95,6 @@ $(window).on("touchstart", ".fullLink", function(e) {
 });
 
 
-function onFsSuccess(fileSystem){
-	fileSystem.root.getDirectory("Android/data/com.betaout/rssreader",{create:true},gotDir,onError);
-}
-
-function gotDir(d){
-	DATADIR = d;
-	var reader = DATADIR.createReader();
-	reader.readEntries(gotFiles,onError);
-}
-
-function gotFiles(entries){
-	console.log("Anas This directory has "+entries.length+" entries");
-	for (var i=0; i<entries.length; i++){
-		console.log('Anas '+entries[i].name+' '+entries[i].isDirectory);
-	}
-}
-
-
-function onError(e){
-	console.log(" Anas + ERROR");
-	console.log("Anas "+JSON.stringify(e));
-}
 
 /*function doOnOrientationChange()
   {
