@@ -71,7 +71,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 	contentHTML += entries[selectedEntry].content;
 	contentHTML += '<p/><a href="'+entries[selectedEntry].link + '" class="fullLink" data-role="button">Read Entry on Site</a>';
 	
-	$("#entryText",this).html('<h1 class="ui-title" aria-level="1" role="heading">' + entries[selectedEntry].title + '</h1>'+contentHTML);
+	$("#entryText",this).html('<h2 class="ui-title" aria-level="1" role="heading">' + entries[selectedEntry].title + '</h2>'+contentHTML);
 	$("#entryText .fullLink",this).button();
 	setTimeout(function(){
 		$('img').css({
