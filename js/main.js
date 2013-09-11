@@ -6,7 +6,7 @@ var RSS = "http://www.betaout.com/blog/feed/atom/";
 //Stores entries
 var entries = [];
 var selectedEntry = "";
-var _viewCount = 5;
+var _viewCount = 10;
 var DATADIR;
 
 //listen for detail links
@@ -82,9 +82,8 @@ $("#contentPage").live("pageshow", function(prepage) {
 
 });
 
-$(".more").live('click', function() {
-	var pageNo;
-    _viewCount = _viewCount+5;
+$(".next").live('click', function() {
+	var pageNo = 0;
     pageNo = _viewCount/10;
     if(pageNo>0 && _viewCount%10==0){
     	RSS = "http://www.betaout.com/blog/feed/?paged="+pageNo;
