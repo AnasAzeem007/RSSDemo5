@@ -7,6 +7,7 @@ var RSS = "http://www.betaout.com/blog/feed/atom/";
 var entries = [];
 var selectedEntry = "";
 var _viewCount = 5;
+var DATADIR;
 
 //listen for detail links
 $(".contentLink").live("click", function() {
@@ -24,7 +25,7 @@ function renderEntries(entries) {
 
 //Listen for Google's library to load
 function initialize() {
-	console.log('ready to use google');
+	console.log('Anas ready to use google');
 	var feed = new google.feeds.Feed(RSS);
 	feed.setNumEntries(_viewCount);
 	$.mobile.showPageLoadingMsg();
@@ -35,7 +36,7 @@ function initialize() {
 			localStorage["entries"] = JSON.stringify(entries);
 			renderEntries(entries);
 		} else {
-			console.log("Error - "+result.error.message);
+			console.log("Anas Error - "+result.error.message);
 			if(localStorage["entries"]) {
 				$("#status").html("Using cached version...");
 				entries = JSON.parse(localStorage["entries"]);
@@ -91,6 +92,30 @@ $(window).on("touchstart", ".fullLink", function(e) {
 	e.preventDefault();
 	window.inAppBrowser.showWebPage($(this).attr("href"));
 });
+
+
+function onFsSuccess(fileSystem){
+	fileSystem.root.getDirectory("Android/data/com.betaout/rssreader",{create:true},gotDir,onError);
+}
+
+function gotDir(d){
+	DATADIR = d;
+	var reader = DATADIR.createReader();
+	reader.readEntries(gotFiles,onError);
+}
+
+function gotFiles(entries){
+	console.log("Anas This directory has "+entries.length+" entries");
+	for (var i=0; i<entries.length; i++){
+		console.log('Anas '+entries[i].name+' '+entries[i].isDirectory);
+	}
+}
+
+
+function onError(e){
+	console.log(" Anas + ERROR");
+	console.log("Anas "+JSON.stringify(e));
+}
 
 /*function doOnOrientationChange()
   {
