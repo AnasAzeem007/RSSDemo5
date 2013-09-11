@@ -82,10 +82,11 @@ $("#contentPage").live("pageshow", function(prepage) {
 
 });
 
-$(".more").live('click', function() {
-	var pageNo = 0;
+$(".next").live('click', function() {
+	var pageNo = 1;
+	_viewCount += 10;
     pageNo = _viewCount/10;
-    if(pageNo>0 && _viewCount%10==0){
+    if(pageNo>1 && _viewCount%10==0){
     	RSS = "http://www.betaout.com/blog/feed/?paged="+pageNo;
     	alert(RSS);
     }
