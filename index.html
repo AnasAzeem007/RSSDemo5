@@ -1,57 +1,50 @@
-<!DOCTYPE html> 
-<html> 
-    <head> 
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title></title> 
-    <link rel="stylesheet" href="js/jquery.mobile-1.1.0.min.css" />
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="js/jquery.mobile-1.1.0.min.css"
+	/>
 	<script src="js/jquery-1.8.0.min.js"></script>
 	<script src="js/jquery.mobile-1.1.0.min.js"></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="cordova.js"></script>
-    <script src="phonegap.js"></script>    
-    <script src="js/main.js"></script>
-     <style type="text/css">
-            .more{
-                color:#000;
-                background-color: #999999;
-                padding: 10px;
-                display: inline-block;
-                cursor: pointer;
-            }
-        </style>
-</head> 
-<body> 
+	<script type="text/javascript"
+	src="https://www.google.com/jsapi"></script>
+	<script src="cordova.js"></script>
+	<script src="phonegap.js"></script>
+	<script src="js/main.js"></script>
+	<style type="text/css">
+.more {
+	color:#000;
+	background-color: #999999;
+	padding: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+	</style>
+</head>
 
-<div data-role="page" id="mainPage">
-
-    <div data-role="header">
-        <h1></h1>
-    </div>
-
-    <div data-role="content">  
-		<div id="status"></div>  
-        <ul id="linksList" data-role="listview" data-inset="true"></ul>
-    </div>
-
-	<div class="more">MORE</div>
-    <div data-role="footer">
-        <h4>RSSViewer by Betaout</h4>
-    </div>
-
-    
-</div>
-
-<div data-role="page" id="contentPage">
-
-    <div data-role="header">
-        <a href="#mainPage" data-rel="back">Home</a>
-        <h1></h1>
-    </div>
-
-    <div data-role="content" id="entryText">
-    </div>
-        
-</div>
-
+<body>
+	<div data-role="page" id="mainPage">
+		<div data-role="header">
+			<h1></h1>
+		</div>
+		<div data-role="content">
+			<div id="status"></div>
+			<ul id="linksList" data-role="listview"
+			data-inset="true"></ul>
+		</div>
+		<div class="more">MORE</div>
+		<div data-role="footer">
+			<h4>RSSViewer by Betaout</h4>
+		</div>
+	</div>
+	<div data-role="page" id="contentPage">
+		<div data-role="header"> <a href="#mainPage" data-rel="back">Home</a>
+			<h1></h1>
+		</div>
+		<div data-role="content" id="entryText"></div>
+	</div>
 </body>
+
 </html>
