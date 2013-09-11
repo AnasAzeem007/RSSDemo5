@@ -78,8 +78,9 @@ $("#contentPage").live("pageshow", function(prepage) {
 			'height':'auto',
 			'max-width':'100%',
 		})
-		/*$.each('img',function(){
-		})*/
+		$('h1').css({
+			'font-size':'75%'
+		})
 	},1)
 
 });
