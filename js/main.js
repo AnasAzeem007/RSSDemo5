@@ -70,7 +70,8 @@ $("#contentPage").live("pageshow", function(prepage) {
 	var contentHTML = "";
 	contentHTML += entries[selectedEntry].content;
 	contentHTML += '<p/><a href="'+entries[selectedEntry].link + '" class="fullLink" data-role="button">Read Entry on Site</a>';
-	$("#entryText",this).html(contentHTML);
+	
+	$("#entryText",this).html('<h1 class="ui-title" aria-level="1" role="heading">' + entries[selectedEntry].title + '</h1>'+contentHTML);
 	$("#entryText .fullLink",this).button();
 	setTimeout(function(){
 		$('img').css({
