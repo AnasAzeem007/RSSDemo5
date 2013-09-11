@@ -82,7 +82,7 @@ $("#contentPage").live("pageshow", function(prepage) {
 
 });
 
-$(".next").live('click', function() {
+$(".more").live('click', function() {
 	var pageNo = 0;
     pageNo = _viewCount/10;
     if(pageNo>0 && _viewCount%10==0){
