@@ -35,6 +35,7 @@ function initialize() {
 			entries = result.feed.entries;
 			localStorage["entries"] = JSON.stringify(entries);
 			renderEntries(entries);
+			alert(entries.length);
 		} else {
 			console.log("Anas Error - "+result.error.message);
 			if(localStorage["entries"]) {
